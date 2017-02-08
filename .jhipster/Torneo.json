@@ -1,0 +1,38 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-one",
+            "relationshipName": "juego",
+            "otherEntityName": "juego",
+            "otherEntityField": "nombre"
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "clasificacion",
+            "otherEntityName": "clasificacion",
+            "otherEntityRelationshipName": "torneo"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "numeroParticipantes",
+            "fieldType": "Integer",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170208180654",
+    "entityTableName": "torneo",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

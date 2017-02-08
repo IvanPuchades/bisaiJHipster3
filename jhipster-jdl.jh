@@ -1,0 +1,59 @@
+entity Equipo {
+	nombre String required,
+    fechaCreacion LocalDate required
+}
+
+entity Torneo {
+	nombre String required,
+    numeroParticipantes Integer required
+}
+
+entity Jugador{
+	nickName String required
+}
+
+entity Local{
+nombre String required,
+urlLocalizacion String
+
+}
+
+// an ignored comment
+/** not an ignored comment */
+entity Clasificacion {
+	url String,
+	resultado Integer required,
+    foto ImageBlob,
+    ranking Integer
+}
+
+entity Juego {
+	nombre String required,
+	url String required,
+    foto ImageBlob,
+    qr ImageBlob
+
+}
+
+relationship ManyToOne {
+	Torneo{juego(nombre)} to Juego{torneo},
+
+    Clasificacion{torneo(nombre)} to Torneo{clasificacion},
+    Clasificacion{equipo(nombre)} to Equipo{clasificacion}
+}
+
+relationship OneToOne {
+	Jugador{user(login)} to User
+}
+
+
+
+relationship ManyToMany {
+	Equipo{jugador(nickName)} to Jugador{equipo}
+
+
+}
+
+
+
+

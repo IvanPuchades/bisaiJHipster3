@@ -1,0 +1,40 @@
+{
+    "fluentMethods": true,
+    "relationships": [
+        {
+            "relationshipType": "many-to-many",
+            "otherEntityRelationshipName": "equipo",
+            "relationshipName": "jugador",
+            "otherEntityName": "jugador",
+            "otherEntityField": "nickName",
+            "ownerSide": true
+        },
+        {
+            "relationshipType": "one-to-many",
+            "relationshipName": "clasificacion",
+            "otherEntityName": "clasificacion",
+            "otherEntityRelationshipName": "equipo"
+        }
+    ],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "fechaCreacion",
+            "fieldType": "LocalDate",
+            "fieldValidateRules": [
+                "required"
+            ]
+        }
+    ],
+    "changelogDate": "20170208180652",
+    "entityTableName": "equipo",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}

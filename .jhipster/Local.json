@@ -1,0 +1,22 @@
+{
+    "fluentMethods": true,
+    "relationships": [],
+    "fields": [
+        {
+            "fieldName": "nombre",
+            "fieldType": "String",
+            "fieldValidateRules": [
+                "required"
+            ]
+        },
+        {
+            "fieldName": "urlLocalizacion",
+            "fieldType": "String"
+        }
+    ],
+    "changelogDate": "20170208180656",
+    "entityTableName": "local",
+    "dto": "no",
+    "pagination": "no",
+    "service": "no"
+}
